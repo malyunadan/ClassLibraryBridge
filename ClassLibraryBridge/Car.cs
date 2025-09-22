@@ -1,37 +1,26 @@
 ﻿namespace ClassLibraryBridge
 {
-    public class Car
+    /// <summary>
+    /// class for car inheriting from vehicle
+    /// summary>
+    public class Car : Vehicle
     {
         /// <summary>
-        /// property for license plate
-        /// property for date
-        /// </summary>
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
-        /// <summary>
-        /// constructor for license plate and date
+        /// initialize license plate and date in base class
+        /// summary>
         public Car(string licenseplate, DateTime date)
-        {
-            Licenseplate = licenseplate;
-            Date = date;
-        }
+        : base(licenseplate, date) { }
         /// <summary>
-        /// method to return price
-        /// <returns> 230.0 </returns>
-        /// </summary>
-        public double Price()
+        /// abstract method to return price, that is overridden here
+        public override double Price()
         {
             return 230.0;
         }
         /// <summary>
-        /// method to return vehicle type
-        /// returns "Car"
-        /// </summary>
-
-        public string VehicleType()
+        /// abstract method to return vehicle type, that is overridden here
+        public override string VehicleType()
         {
             return "Car";
         }
-
     }
 }

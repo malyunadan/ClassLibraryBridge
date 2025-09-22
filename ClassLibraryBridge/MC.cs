@@ -6,29 +6,26 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryBridge
 {
-    public class MC
+    /// <summary>
+    /// class for MC, inherits from Vehicle
+    public class MC : Vehicle
     {
         /// <summary>
-        /// property for license plate
-        /// property for date
+        /// apply base constructor to initialize license plate and date
         /// summary>
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
-        /// <summary>
-        /// constructor for license plate and date
         public MC(string licenseplate, DateTime date)
-        {
-            Licenseplate = licenseplate;
-            Date = date;
-        }
+            : base(licenseplate, date) { }
         /// <summary>
-        /// method to return price
-        /// method to return vehicle type
-        public double Price()
+        /// abstract method to return price, overridden here
+        /// summary>
+        public override double Price()
         {
             return 120.0;
         }
-        public string Vehicle()
+        /// <summary>
+        /// abstract method to return vehicle type, overridden here
+        /// summary>
+        public override string VehicleType()
         {
             return "MC";
         }

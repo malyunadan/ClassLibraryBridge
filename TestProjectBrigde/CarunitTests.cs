@@ -3,10 +3,12 @@ using ClassLibraryBridge;
 namespace TestProjectBrigde
 {
     [TestClass]
-    public sealed class BridgeunitTests
+    public sealed class CarunitTests
     {
         [TestMethod]
-
+        /// <summary>
+        /// a test method to verify that the Price method returns the fixed value 230.0 for a Car instance
+        /// 
         public void Price_ReturnsFixedValue()
         {
             //Arange
@@ -16,6 +18,9 @@ namespace TestProjectBrigde
             //Assert
             Assert.AreEqual(230.0, price);
         }
+        /// <summary>
+        /// a test method to verify that the VehicleType method returns "Car" for a Car instance
+        /// summary>
 
         [TestMethod]
         public void VehicleType_ReturnsCar()

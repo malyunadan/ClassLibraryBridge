@@ -32,5 +32,17 @@ namespace TestProjectBrigde
             //Assert
             Assert.AreEqual("Car", vehicleType);
         }
+        
+        public class VehicleValidationTests
+        {
+            [TestMethod]
+            [ExpectedException(typeof(ArgumentException))]
+            public void LicensePlate_TooLong_ThrowsArgumentException()
+            {
+                // Arrange & Act
+                var car = new Car("TOOLONG123", DateTime.Now);
+                // Assert is handled by ExpectedException
+            }
+        }
     }
 }

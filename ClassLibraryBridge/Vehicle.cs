@@ -19,6 +19,10 @@ public abstract class Vehicle
 
     public Vehicle(string licenseplate, DateTime date)
     {
+        if (licenseplate.Length > 7)
+        {
+            throw new ArgumentException("License plate cannot be longer than 7 characters");
+        }
         Licenseplate = licenseplate;
         Date = date;
     }

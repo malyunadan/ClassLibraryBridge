@@ -10,13 +10,39 @@ namespace ClassLibraryBridge;
 /// abstract class Vehicle, the base class for Car and MC
 /// summary>
 public abstract class Vehicle
-/// <summary>
-/// properties for license plate and date, that are initialized in the constructor
-/// summary>
+
 {
+    /// <summary>
+    /// Abstract base class for all vehicle types.
+    /// Contains shared logic for Brobizz discount and price calculation.
+    /// </summary>
+    public bool HasBrobizz { get; }
+    protected Vehicle(bool hasBrobizz)
+    {
+        HasBrobizz = hasBrobizz;
+    }
+    public virtual double GetPrice()
+    {
+        return 0.0; // overidden in subclasses
+    }
+    /// <summary>
+    /// this method is protected that means only accessible to class itself and its subclasses - (like Car or MC). 
+    /// </summary>
+    /// - If HasBrobizz is true → return price * 0.9
+    ///Otherwise → return price unchanged.
+    /// <param name="price"></param>
+    /// <returns> 10% discout if true</returns>
+    protected double ApplyBrobizzDiscount(double price)
+    {
+        return HasBrobizz ? price * 0.9 : price;
+
+    }
+    /// <summary>
+    /// properties for license plate and date, that are initialized in the constructor
+    /// summary>
     public string Licenseplate { get; set; }
     public DateTime Date { get;  set; }
-
+    
     public Vehicle(string licenseplate, DateTime date)
     {
         if (licenseplate.Length > 7)

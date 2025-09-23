@@ -30,6 +30,50 @@ namespace TestProjectVehicle
             Assert.AreEqual("Car", carType);
             Assert.AreEqual("MC", mcType);
         }
+        [TestMethod]
+        public void Car_withBrobizz_Aplies10PocentDiscount()
+        {
+            //Arrange 
+            var car = new Car(true); //Brobizz is active
+            //Act
+            var price = car.GetPrice();
+            //Assert
+            Assert.AreEqual(216.0, price, 0.001); // 240 - 10% discount
+
+        }
+        [TestMethod]
+        public void Car_WithoutBrobizz_NoDiscountApplied()
+        {
+            var car = new Car(false); // no Brobizz
+            var price = car.GetPrice();
+            Assert.AreEqual(240.0, price, 0.001); // Full price
+        }
+
+
+        [TestMethod]
+        public void MC_withBrobizz_Applies10PercentDiscount()
+        {
+            // Arrange
+            var mc = new MC(true); // Brobizz is active
+
+            // Act
+            var price = mc.GetPrice();
+
+            // Assert
+            Assert.AreEqual(112.5, price, 0.001); // 125 - 10% discount
+        }
+
+
+        [TestMethod]
+        public void MC_withoutBrobizz_NoDiscountApplied()
+        {
+            //Arrange 
+            var mc = new MC(false); //No Brobizz
+            //Act
+            var price = mc.GetPrice();
+            //Assert
+            Assert.AreEqual(125.0, price, 0.001); //Full price
+        }
     }
 }
 

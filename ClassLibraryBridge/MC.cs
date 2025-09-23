@@ -11,6 +11,22 @@ namespace ClassLibraryBridge
     public class MC : Vehicle
     {
         /// <summary>
+        /// Represents a MC with a fixed base price.
+        /// Applies Brobizz discount if enabled
+        /// </summary>
+        /// <param name="hasBrobizz"></param>
+        public MC(bool hasBrobizz) : base(hasBrobizz) { }
+        /// <summary>
+        /// here it applies the discount to the baseprice.
+        /// </summary>
+        /// <returns></returns>
+        public override double GetPrice()
+        {
+            double basePrice = 125.0;
+            return ApplyBrobizzDiscount(basePrice);
+        }
+
+        /// <summary>
         /// apply base constructor to initialize license plate and date
         /// summary>
         public MC(string licenseplate, DateTime date)

@@ -10,7 +10,7 @@ namespace TestProjectMC
         public void Price_ReturnsFixedValue()
         {
             //Arange
-            var mc = new MC("ABCM", DateTime.Now);
+            var mc = new MC("ABCM", DateTime.Now,false);
             //Act
             var price = mc.Price();
             //Assert
@@ -22,7 +22,7 @@ namespace TestProjectMC
         public void Vehicle_ReturnsMC()
         {
             //Arange
-            var mc = new MC("ABCM", DateTime.Now);
+            var mc = new MC("ABCM", DateTime.Now, false);
             //Act
             var vehicleType = mc.VehicleType();
             //Assert

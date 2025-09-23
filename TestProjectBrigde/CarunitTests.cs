@@ -12,7 +12,7 @@ namespace TestProjectBrigde
         public void Price_ReturnsFixedValue()
         {
             //Arange
-            var car = new Car("ABC123", DateTime.Now);
+            var car = new Car("ABC123", DateTime.Now, false);
             //Act
             var price = car.Price();
             //Assert
@@ -26,7 +26,7 @@ namespace TestProjectBrigde
         public void VehicleType_ReturnsCar()
         {
             //Arange
-            var car = new Car("ABC123", DateTime.Now);
+            var car = new Car("ABC123", DateTime.Now, false);
             //Act
             var vehicleType = car.VehicleType();
             //Assert
@@ -40,7 +40,7 @@ namespace TestProjectBrigde
             public void LicensePlate_TooLong_ThrowsArgumentException()
             {
                 // Arrange & Act
-                var car = new Car("TOOLONG123", DateTime.Now);
+                var car = new Car("TOOLONG123", DateTime.Now, false);
                 // Assert is handled by ExpectedException
             }
         }

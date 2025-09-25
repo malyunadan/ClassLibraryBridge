@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibraryBridge</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:ClassLibraryBridge.Car" -->
+        <!-- Badly formed XML comment ignored for member "T:ClassLibraryBridge.MC" -->
+        <member name="T:ClassLibraryBridge.Vehicle">
+            <summary>
+            Abstract base class for all vehicle types.
+            Contains shared logic for Brobizz discount and price calculation.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ClassLibraryBridge.Vehicle.HasBrobizz" -->
+        <member name="M:ClassLibraryBridge.Vehicle.ApplyBrobizzDiscount(System.Double)">
+            <summary>
+            Applies Brobizz discount if applicable (10%).
+            </summary>
+        </member>
+        <member name="M:ClassLibraryBridge.Vehicle.Price">
+            <summary>
+            Must be implemented in derived classes to return base ticket price.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ClassLibraryBridge.Vehicle.VehicleType" -->
+    </members>
+</doc>

@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// class for car inheriting from vehicle
-    /// summary>
+    /// <summary>
     public class Car : Vehicle
     {
         public Car(string licenseplate, DateTime date, bool hasBrobizz)

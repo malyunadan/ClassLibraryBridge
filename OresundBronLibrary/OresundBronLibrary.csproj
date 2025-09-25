@@ -4,11 +4,16 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibraryBridge\ClassLibraryBridge.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ClassLibraryBridge">
+      <HintPath>..\ClassLibraryBridge\bin\Debug\net9.0\ClassLibraryBridge.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

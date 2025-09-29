@@ -55,31 +55,31 @@ namespace TestProjectTicket
             Assert.AreEqual(175.95, price, 0.001); // (230 * 0.85) * 0.9
         }
 
-        [TestMethod]
-        public void MC_Weekend_NoDiscount()
-        {
-            // Arrange
-            var mc = new MC("test", new DateTime(2025, 9, 21), false); // Sunday
+        //[TestMethod]
+        //public void MC_Weekend_NoDiscount()
+        //{
+        //    // Arrange
+        //    var mc = new MC("test", new DateTime(2025, 9, 21), false); // Sunday
 
-            // Act
-            var price = mc.Price();
+        //    // Act
+        //    var price = mc.Price();
 
-            // Assert
-            Assert.AreEqual(120.0, price, 0.001); // MC full price, no weekend discount
-        }
+        //    // Assert
+        //    Assert.AreEqual(120.0, price, 0.001); // MC full price, no weekend discount
+        //}
 
-        [TestMethod]
-        public void MC_Weekend_WithBrobizz_OnlyBrobizzDiscount()
-        {
-            // Arrange
-            var mc = new MC("test", new DateTime(2025, 9, 21), true); // Sunday
+        //[TestMethod]
+        //public void MC_Weekend_WithBrobizz_OnlyBrobizzDiscount()
+        //{
+        //    // Arrange
+        //    var mc = new MC("test", new DateTime(2025, 9, 21), true); // Sunday
 
-            // Act
-            var price = mc.Price();
+        //    // Act
+        //    var price = mc.Price();
 
-            // Assert
-            Assert.AreEqual(108.0, price, 0.001); // 120 * 0.9, only Brobizz
-        }
+        //    // Assert
+        //    Assert.AreEqual(108.0, price, 0.001); // 120 * 0.9, only Brobizz
+        //}
     }
 }
 

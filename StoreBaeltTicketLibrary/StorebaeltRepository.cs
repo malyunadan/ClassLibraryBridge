@@ -10,7 +10,7 @@ namespace StoreBaeltTicketLibrary
     public class StorebaeltRepository : IStorebaeltRepository
     {
         
-    private readonly List<StoreBaeltCar> _vehicles = new List<StoreBaeltCar>();
+    private List<StoreBaeltCar> _vehicles = new List<StoreBaeltCar>();
 
         public void AddVehicle(StoreBaeltCar car)
         {

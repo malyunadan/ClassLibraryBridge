@@ -19,7 +19,7 @@ namespace StoreBaeltTicketLibrary
         {
             double basePrice = 230;
 
-            if (Date.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday)
+            if (Date.DayOfWeek == DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
             {
                 basePrice *= 0.85; // 15% off
             }
